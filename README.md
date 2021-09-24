@@ -36,3 +36,4 @@ Some month later I have seen a crack release of *'Bubbler'* game by `Slider^BIS`
 - [speccywiki](http://speccy.info/Brainwave)
 - [wikipedia](https://ru.wikipedia.org/wiki/Brainwave_team)
 - [zxart.ee](https://zxart.ee/)
+- [cracktro v1 sources](https://github.com/alexanderbazhenoff/brainwave-cracktro-v1)
