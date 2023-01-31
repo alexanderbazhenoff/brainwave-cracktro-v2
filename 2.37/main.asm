@@ -1,28 +1,29 @@
 ; This Source Code Form is subject to the terms of the MIT
 ; hLicense. If a copy of the MPL was not distributed with
-; this file, You can obtain one at ttps://github.com/aws/mit-0
+; this file, You can obtain one at:
+; https://github.com/alexanderbazhenoff/brainwave-cracktro-v2/blob/main/LICENSE
 
         ORG #6000
         DUP #40
         DS 0,#100
-        EDUP 
+        EDUP
         ORG #6000
         MACRO DISPLIN
         DISPLAY "+"
         DUP 47
         DISPLAY /L,"-"
-        EDUP 
+        EDUP
         DISPLAY /L,"+"
-        ENDM 
+        ENDM
         MACRO POI16D
         DUP 16
         DISPLAY /L,"."
-        EDUP 
-        ENDM 
+        EDUP
+        ENDM
         DISPLIN
  DISPLAY "|   bra!nwave crack7r0 v2.37 c0ded b4 alx^bw.   |"
         DISPLIN
- DISPLAY 
+ DISPLAY
  DISPLAY "WARNING! addr of resident 4 STS.............#5D3B"
 
 GA      EQU 1
@@ -66,11 +67,11 @@ K4      EQU #47
 
         MACRO COLRMOD2
 K1=#41
-        ENDM 
+        ENDM
         MACRO COLRMOD3
 K1=#42
 K2=#41
-        ENDM 
+        ENDM
 
 ;tackts4creditz
 T00     EQU 0
@@ -131,7 +132,7 @@ TR_POI=6
 TR_YEP=29
 CCR=0
 PASC=1
-        ENDIF 
+        ENDIF
         IF0 GA-1
         DISPLAY /L,"SAVAGE COLLECTION"
         COLRMOD3
@@ -143,28 +144,28 @@ PAGS=8
 CCR=0
 TR_PAR  EQU 5
 TR_PRT  EQU 27
-        ENDIF 
+        ENDIF
         IF0 GA-2
         DISPLAY /L,"ITALY '1990";***
 TR_ACT=1
 TR_POI=2
 TR_YEP=17
 CCR=0
-        ENDIF 
+        ENDIF
         IF0 GA-3
         DISPLAY /L,"INTERNATIONAL 3D TENNIS";***
         COLRMOD2
 TR_POI=0
 TR_YEP=0
 OPT=1
-        ENDIF 
+        ENDIF
         IF0 GA-4
         DISPLAY /L,"NETHER WORLD"
 TR_ACT=1
 TR_POI=6
 TR_YEP=31
 CCR=0
-        ENDIF 
+        ENDIF
         IF0 GA-5
         DISPLAY /L,"YOGI BEAR COLLECTION"
 TR_POI=2
@@ -173,38 +174,38 @@ PA=0
 PAGS=10
 TR_PAR  EQU 3
 TR_PRT  EQU 24
-        ENDIF 
+        ENDIF
         IF0 GA-6
         DISPLAY /L,"CLIFF HANGER"
 TR_POI=1
 TR_YEP=11
 CCR=0
-        ENDIF 
+        ENDIF
         IF0 GA-7
         DISPLAY /L,"HEARTBROKEN"
 TR_POI=1
 TR_YEP=10
 OPT=1
-        ENDIF 
+        ENDIF
         IF0 GA-8
         DISPLAY /L,"WELL'S FORGO"
 TR_POI=1
 TR_YEP=20
 CCR=0
-        ENDIF 
+        ENDIF
         IF0 GA-9
         DISPLAY /L,"PUZZNIC"
 TR_POI=3
 TR_YEP=21
 CCR=0
 COLRMODE3
-        ENDIF 
+        ENDIF
         IF0 GA-10
         DISPLAY /L,"XENO"
 TR_POI=0
 TR_YEP=0
 CCR=0
-        ENDIF 
+        ENDIF
 
 TR_NOP  EQU TR_YEP+TR_POI ;NOPs
 
@@ -212,7 +213,7 @@ TR_NOP  EQU TR_YEP+TR_POI ;NOPs
 PAGS=6
 TR_POI=0
 TR_YEP=0
-        ENDIF 
+        ENDIF
 
         DISPLIN
 
@@ -242,19 +243,19 @@ OUT16   EQU PPS+#701
         LD HL,MUSIC
         LD DE,MUSBEG
         LD B,'ENDMUS-'MUSIC+2
-        LDIR 
+        LDIR
         LD HL,LOADER
         LD DE,#5D3B
         PUSH DE
         LD C,ENDLOADER-LOADER
-        LDIR 
+        LDIR
 
         IF0 GA-1
         LD HL,SCREDATA
         LD DE,#5F2C
         LD C,ESCREDATA-SCREDATA
-        LDIR 
-        ENDIF 
+        LDIR
+        ENDIF
 
         LD (ENDSTK),SP
 
@@ -262,14 +263,14 @@ OUT16   EQU PPS+#701
 
         LD BC,#7FFE
         IN A,(C)
-        RRA 
+        RRA
         JR NC,YSKIP
         LD HL,PART
         LD D,(HL)
         LD B,#F7
         IN A,(C)
         LD B,5
-SKIPL   RRA 
+SKIPL   RRA
         JR NC,YSKIP0
         INC D
         DJNZ SKIPL
@@ -278,26 +279,26 @@ NSKIP
 YSKIP0  LD (HL),D
 YSKIP   JP SKIP_INTRO
 
-        ELSE 
+        ELSE
         IF0 PASC
         LD BC,#7FFE
         IN A,(C)
-        RRA 
+        RRA
         JP NC,SKIP_INTRO
         JP #FBDE
-        ELSE 
+        ELSE
         LD BC,#F7FE
         LD HL,TR_DAT
         IN A,(C)
-        RRA 
+        RRA
         JR NC,SKIPINT
-        RRA 
+        RRA
         JP C,#FBDE
         INC (HL)
 SKIPINT JP NC,SKIP_INTRO
 
-        ENDIF 
-        ENDIF 
+        ENDIF
+        ENDIF
 
         IF0 GA-1
 SCREDATA
@@ -328,9 +329,9 @@ LTEXTL  DB #10,7,#11,1,#16,1,7
         DB " SAVAGE - LEVEL "
 LTEXLEV DB "  "
         DB #FF
-        ENT 
+        ENT
 ESCREDATA
-        ENDIF 
+        ENDIF
 
 ;-------MAIN EXECUTIONS
 KERN_SP
@@ -412,9 +413,9 @@ KERN_SP
         DW WAITFRM0
         IF0 TR_ACT-1
         DW TPH13
-        ELSE 
+        ELSE
         DW TPH13-1
-        ENDIF 
+        ENDIF
         DW TRAINER
 
 ;---TRAINER MENUE
@@ -439,17 +440,17 @@ TRAINER
         LD HL,8*TR_PRT+SPRTBL
         LD DE,SPDYEP
         LD BC,8*TR_PAR
-        LDIR 
+        LDIR
 PS_ML   LD DE,8*TR_PRT+SPRTBL+4
         LD HL,SPDYEP+4
         LD A,#BF
         IN A,(#FE)
-        RRA 
+        RRA
         CALL NC,PS_INC
         LD BC,#008
         LD A,#F7
         IN A,(#FE)
-TR_SL_L RRA 
+TR_SL_L RRA
         CALL NC,PS_KP
         INC B
         LD (PS_REGA),A
@@ -479,7 +480,7 @@ PS_P    CALL PRINT
         LD (W_TBLA),HL
         CALL TXTATR
 PSPP
-        ENDIF 
+        ENDIF
 
         MACRO PS_SR
 PART    DB 0            ;PART 0-1st, 1-2nd, 2-3rd
@@ -502,16 +503,16 @@ PS_KP   PUSH AF
         LD B,0
         LD C,A
         ADD HL,BC
-        HALT 
-        LDI 
-        LDI 
+        HALT
+        LDI
+        LDI
         CALL HLT_9
         POP DE
         POP HL
         POP BC
         POP AF
-        RET 
-        ENDM 
+        RET
+        ENDM
 ;---
         LD HL,EXIT
         LD (SPC_JMP),HL
@@ -525,8 +526,8 @@ PS_KP   PUSH AF
         LD HL,8*TR_YEP+SPRTBL
         LD DE,SPDYEP
         LD BC,8*TR_POI*2
-        LDIR 
-        ENDIF 
+        LDIR
+        ENDIF
 TR_KWL
         IFN TR_POI
         LD HL,SPDYEP+4
@@ -536,13 +537,13 @@ TR_KWL
         LD IX,TR_DAT
         LD A,#BF
         IN A,(#FE)
-        RRA 
+        RRA
         JR NC,TR_TOG
         LD A,#F7
         IN A,(#FE)
         LD BC,#508
 TR_KL   PUSH BC
-        RRA 
+        RRA
         CALL NC,TR_KP
         CALL NC,HLT_9
         LD B,0
@@ -560,23 +561,23 @@ TR_KL   PUSH BC
         BIT 4,A
         CALL Z,TR_KP
         CALL Z,HLT_9
-        ENDIF 
+        ENDIF
 
-        ELSE 
+        ELSE
         LD IX,TR_DAT
         LD A,#BF
         IN A,(#FE)
-        RRA 
+        RRA
         JR NC,TR_TOG
         LD A,#F7
         IN A,(#FE)
-        RRA 
+        RRA
         CALL NC,TR_KP
         CALL NC,HLT_9
 
-        ENDIF 
+        ENDIF
 
-        ENDIF 
+        ENDIF
         JR TR_KWL
 
         IFN TR_POI
@@ -606,35 +607,35 @@ TR_KP   PUSH AF
         JR NZ,TR_PY
         LD BC,TR_POI*8
         ADD HL,BC
-TR_PY   HALT 
-        LDI 
-        LDI 
+TR_PY   HALT
+        LDI
+        LDI
         POP BC
         POP HL
         POP DE
         POP AF
-        RET 
-        ENDIF 
+        RET
+        ENDIF
 HLT_9
         DUP 9
-        HALT 
-        EDUP 
-        RET 
+        HALT
+        EDUP
+        RET
 W_SUB   LD A,(W_COL)
         SUB B
         LD (W_COL),A
-        RET 
+        RET
 
         IF0 PA
         PS_SR
-        ENDIF 
+        ENDIF
 
 ;---TRAINER MODE [0=NOP, 1=YEP]
         IFN TR_POI
 TR_DAT  DS TR_POI,#FF
-        ENDIF 
+        ENDIF
 
-        ENDIF 
+        ENDIF
 
 ;---EXIT FORM CRACKTRO
 EXIT    LD SP,#3131
@@ -654,15 +655,15 @@ INSL_E  LD HL,I_LOGO+#20
         LD H,#5A
         CALL ILS0
 SKIP_INTRO
-        DI 
+        DI
         LD IY,#5C3A
         LD HL,#2758
-        EXX 
+        EXX
 
         IFN GA
         LD A,#3F
         LD I,A
-        ENDIF 
+        ENDIF
 
         IM 1
         CALL MUSSTO
@@ -671,36 +672,36 @@ SKIP_INTRO
         LD DE,#5B14     ;if several parts:
         LD HL,TR_DAT    ;#5B14-15 - tr_points
         LDI             ;#5B16 - part
-        LDI 
+        LDI
         LD A,(PART)     ;if own part
         LD (DE),A       ;#5B14...#5B14+TR_POI - tr_points
-        ELSE 
+        ELSE
         IFN TR_POI      ;#00=point disabled
         IF0 TR_POI-1
         LD A,(TR_DAT)
         LD (#5B14),A
-        ELSE 
+        ELSE
         IF0 TR_POI-2
         LD DE,#5B14
         LD HL,TR_DAT
         DUP TR_POI
-        LDI 
-        EDUP 
-        ELSE 
+        LDI
+        EDUP
+        ELSE
         LD DE,#5B14
         LD HL,TR_DAT
         LD BC,TR_POI
-        LDIR 
+        LDIR
 
-        ENDIF 
-        ENDIF 
-        ENDIF 
-        ENDIF 
-        RET 
+        ENDIF
+        ENDIF
+        ENDIF
+        ENDIF
+        RET
         IF0 TR_POI
         ORG $-4
         JP MUSSTO
-        ENDIF 
+        ENDIF
 
 FREEZW_TXTATR
         LD HL,(W_TBLA)
@@ -708,7 +709,7 @@ FREEZW_TXTATR
         LD DE,8
         LD A,22
 FREZ_WL LD B,TPH4
-FREZ_W2 HALT 
+FREZ_W2 HALT
         DJNZ FREZ_W2
         ADD HL,DE
         LD (W_TBLA),HL
@@ -733,7 +734,7 @@ TXTATRL DEC HL
         LD (HL),A
         OR (HL)
         JR Z,TXTATRL
-        RET 
+        RET
 
 WTXTATR CALL WA_OFF
         JR TXTATR
@@ -742,13 +743,13 @@ WA_ON   LD A,H          ;check it always!
         JR WA_L
 WA_OFF  XOR A
 WA_L    LD (WORD_S),A
-        RET 
+        RET
 ;---SPACE KEY SWITCHER
 SPC_OFF LD A,H
         JR SPC_L
 SPC_ON  XOR A
 SPC_L   LD (SPCK_S),A
-        RET 
+        RET
 ;---SPRITES ACTION MANAGER
 W_ACT   LD (SAM_ESP),SP
         LD SP,SPRTBL
@@ -810,7 +811,7 @@ SAM_RBC EQU $-2
         DJNZ W_ACTL
         LD SP,#3131
 SAM_ESP EQU $-2
-        RET 
+        RET
 
 SP_ADX  INC A
         CP 7
@@ -823,7 +824,7 @@ SP_ADY  INC A
         JR SP_NDY
 
 ;---INT SR
-INT_SR  DI 
+INT_SR  DI
         PUSH AF
         PUSH BC
         PUSH DE
@@ -834,7 +835,7 @@ INT_SR  DI
         IFN TESTC
         LD A,TESTC
         OUT (#FE),A
-        ENDIF 
+        ENDIF
 
         LD A,0
 WORD_S  EQU $-1
@@ -845,7 +846,7 @@ ACT_SR  EQU $-2
         IFN TESTC
         XOR A
         OUT (#FE),A
-        ENDIF 
+        ENDIF
 
         LD HL,#FFFF-3
 FRAMES  EQU $-2
@@ -873,16 +874,16 @@ SPCK_S  EQU $-1
         JR NZ,NSPCK
         LD A,#7F
         IN A,(#FE)
-        RRA 
+        RRA
         JR NC,SPC_PRS
 NSPCK   EX AF,AF'
-        EI 
-        RET 
+        EI
+        RET
 
 SPC_PRS POP HL
         CALL WA_OFF
         CALL SPC_OFF
-        EI 
+        EI
         CALL TXTATR
         JP TRAINER
 SPC_JMP EQU $-2
@@ -904,7 +905,7 @@ WAITFRM LD HL,(FRAMES)
         JR NZ,WAITFRM
         LD HL,TMP
         LD (TACTS),HL
-        RET 
+        RET
 
 ;---DEL ATTR/NON-SYNCHRONIZED
 DELATRN LD A,#18
@@ -955,7 +956,7 @@ OUTA_L3 ADD HL,DE
         DJNZ OUTA_L3
 OUTA_M7 LD E,(IY+1)
         ADD HL,DE
-        HALT 
+        HALT
         LD A,(IY+5)
         INC A
         CP 2
@@ -982,7 +983,7 @@ OUTA_L5 LD (HL),A
 OUTA_M3 POP HL
         POP BC
         DJNZ OUTA_L1
-        RET 
+        RET
 
 OUT_1   CALL #CDCD
 OUTA_S2 EQU $-2
@@ -997,9 +998,9 @@ OUTA_S2 EQU $-2
         JR OUTA_M3
 
 OUTA_P1 LD A,(IY+2)
-        RET 
+        RET
 OUTA_P2 XOR A
-        RET 
+        RET
 ;---INSTALL LOGO ON START
 INSL_S  LD HL,I_LOGO
         LD (LOGO_A),HL
@@ -1020,14 +1021,14 @@ ILS_X   LD A,#20
         LD (WORD_S),A
         LD HL,PD_LOGO
         LD (ACT_SR),HL
-PDLWAIT EI 
-        HALT 
+PDLWAIT EI
+        HALT
         DEC A
         JR NZ,PDLWAIT
         LD (WORD_S),A
         LD HL,W_ACT
         LD (ACT_SR),HL
-        RET 
+        RET
 ILS     LD (ILSNLSR),IX
 ILS_L   PUSH BC
         PUSH HL
@@ -1036,7 +1037,7 @@ ILS_L   PUSH BC
 ILS_L1  LD (DE),A
         INC DE
         DJNZ ILS_L1
-        LDIR 
+        LDIR
         POP HL
         EX DE,HL
         CALL #CDCD
@@ -1044,7 +1045,7 @@ ILSNLSR EQU $-2
         EX DE,HL
         POP BC
         DJNZ ILS_L
-        RET 
+        RET
 ;---PUT/DEL LOGO
 PD_LOGO LD HL,#2121
 LOGO_A  EQU $-2
@@ -1067,8 +1068,8 @@ OUTLL1  PUSH BC
         PUSH DE
         PUSH HL
         DUP 32
-        LDI 
-        EDUP 
+        LDI
+        EDUP
         POP HL
         LD DE,#40
         ADD HL,DE
@@ -1077,11 +1078,11 @@ OUTLL1  PUSH BC
 LINECLK EQU $-2
         POP BC
         DJNZ OUTLL1
-        RET 
+        RET
 DOWN_20 LD A,E
         ADD A,#20
         LD E,A
-        RET 
+        RET
 ;---PRINT TXT 2 SHADOW WINDOW
 PRINT0  POP HL
 PRINT   LD B,(HL)
@@ -1109,7 +1110,7 @@ PRNTWRD PUSH BC
 ;       ADD IX,DE
         DUP 4
         INC IX
-        EDUP 
+        EDUP
         LD HL,PRINTW
         PUSH HL
 ;       LD D,H
@@ -1183,7 +1184,7 @@ NO_PJMP
         LD (HL),A
         ADD HL,BC
         INC DE
-        EDUP 
+        EDUP
         LD A,(DE)
         LD (HL),A
         LD HL,(PRNT_AD)
@@ -1199,8 +1200,8 @@ ATRT_P  EQU $-2
 ;       LD BC,6
 ;       LDIR
         DUP 6
-        LDI 
-        EDUP 
+        LDI
+        EDUP
         INC DE
         INC DE
         LD (ATRT_P),DE
@@ -1276,7 +1277,7 @@ DR_SPL1 LD (IY),E
 DR_SPL2 PUSH BC
         PUSH HL
         LD B,0
-        LDIR 
+        LDIR
         POP HL
         LD C,#10
         ADD HL,BC
@@ -1289,7 +1290,7 @@ SCROL_L OR A
         DUP 16
         RR (HL)
         INC HL
-        EDUP 
+        EDUP
         DJNZ SCROL_L
         POP BC
         POP HL
@@ -1335,17 +1336,17 @@ PAT_FND PUSH IX
         POP BC
         INC C
         DJNZ PAT_L1
-        RET 
+        RET
 
-P_M_UP  EXA 
+P_M_UP  EXA
         LD A,(PR_POS)
         OR A
         JR Z,P_MU_NC
         DEC A
 P_MU_NC LD (PR_POS),A
-        EXA 
-        RET 
-P_M_DN  EXA 
+        EXA
+        RET
+P_M_DN  EXA
         LD A,(PR_POS)
         CP 3
         JR Z,P_MU_NC
@@ -1363,48 +1364,48 @@ DOWN_DE INC D
         AND #F8
         ADD A,D
         LD D,A
-OUT0    RET 
+OUT0    RET
 
 BEGTEXT
         INCLUDE "krak2txt"
 
 TEXTC   IF0 GA
         C_BUBL
-        ENDIF 
+        ENDIF
         IF0 GA-1
         P_SAVAG
 TXTC3
 TXTC2
 TXTC1
         C_SAVAG
-        ENDIF 
+        ENDIF
         IF0 GA-2
         C_ITAL
-        ENDIF 
+        ENDIF
         IF0 GA-3
         ;NONE
-        ENDIF 
+        ENDIF
         IF0 GA-4
         C_NWRL
-        ENDIF 
+        ENDIF
         IF0 GA-5
         ;;
-        ENDIF 
+        ENDIF
         IF0 GA-6
         C_CLIF
-        ENDIF 
+        ENDIF
         IF0 GA-7
         C_HERT
-        ENDIF 
+        ENDIF
         IF0 GA-8
         C_WELLS
-        ENDIF 
+        ENDIF
         IF0 GA-9
         C_PUZN
-        ENDIF 
+        ENDIF
         IF0 GA-10
         C_XENO
-        ENDIF 
+        ENDIF
 
 ENDTEXT
 ;---OUT SR TBL
@@ -1431,7 +1432,7 @@ ENDMUS
         LD DE,#4F00
         ;LD D,#4F
         LD BC,ENDTEXT-BEGTEXT+1
-        LDDR 
+        LDDR
         INC HL
         INC DE
         LD B,PAGS
@@ -1440,12 +1441,12 @@ DCTX_L0 PUSH BC
         LD (HL),A
         INC HL
         INC DE
-DCTX_L1 EXA 
+DCTX_L1 EXA
         LD A,(DE)
         LD C,A
         DUP 3
         SRL A
-        EDUP 
+        EDUP
 ;       AND #F
         LD (HL),A
         INC HL
@@ -1492,12 +1493,12 @@ DCTX_L2 LD A,(DE)
         LD A,B
         LD (#3232),A
 COLAI   EQU $-2
-        EXA 
+        EXA
         DEC A
         JR NZ,DCTX_L1
         POP BC
         DJNZ DCTX_L0
-        ENDIF 
+        ENDIF
 
         CALL MUSINI
         LD HL,LOGO
@@ -1518,7 +1519,7 @@ LAROUND DJNZ LCLOOP1
         JR NZ,LCLOOP
         LD DE,D_LOGO+#A00
         LD B,1
-        LDIR 
+        LDIR
 ;---CALCULATING PRINT POSITIONS TABL
         LD D,#40
         ;LD DE,#4000
@@ -1556,7 +1557,7 @@ IN_INTL LD (DE),A
 ;---DECRUNCH OUT-WINDOW ROUTINES
         LD HL,PPS
         LD SP,KERN_SP
-        RET 
+        RET
 
 DOW_
         CALL D_BEG
@@ -1619,12 +1620,12 @@ DPA_OU1 EQU $-2
 DPA_OU2 EQU $-2
         DJNZ D_OWR22
         CALL D_RET
-        RET 
+        RET
 DP_OUT1 LD (HL),#C5
         INC HL
         LD (HL),#F5
         INC HL
-        RET 
+        RET
 
 DP_OUT2 LD (HL),#31
         INC HL
@@ -1633,7 +1634,7 @@ DP_OUT2 LD (HL),#31
         INC HL
         LD (HL),#D5
         INC HL
-DP_OUT6 RET 
+DP_OUT6 RET
 
 DP_OUT4 LD (HL),#31
         INC HL
@@ -1707,7 +1708,7 @@ D_RET   LD (HL),#31
         LD (HL),#C9
         INC HL
         PUSH IY
-COMRT   RET 
+COMRT   RET
 
 L_IXDE  LD (IX),#E1
         INC IX
@@ -1719,15 +1720,15 @@ L_IX_HL LD (IX),L
         INC IX
         INC HL
         INC HL
-        RET 
+        RET
 
 D_LDIR  EX DE,HL
         PUSH BC
         LD B,0
-        LDIR 
+        LDIR
         POP BC
         EX DE,HL
-        RET 
+        RET
 
 REGDT1  PUSH HL
         PUSH DE
@@ -1738,12 +1739,12 @@ REGDT4  PUSH AF
 REGDT3  PUSH BC
 REGDT2  PUSH DE
         PUSH HL
-REGDT7  EXX 
+REGDT7  EXX
 REGDT5  PUSH BC
         PUSH DE
         PUSH HL
         PUSH AF
-        EXX 
+        EXX
         EX AF,AF'
         PUSH BC
         PUSH DE
@@ -1754,7 +1755,7 @@ REGDAT5 POP AF
         POP HL
         POP DE
         POP BC
-        EXX 
+        EXX
         EX AF,AF'
         POP AF
         POP HL
@@ -1769,33 +1770,33 @@ REGDAT1 POP AF
 REGDAT2 POP HL
         POP DE
         POP BC
-        EXX 
+        EXX
         POP HL
         POP DE
         POP BC
         POP AF
-        ENT 
+        ENT
 
         ;---------loaders
 ;       IF CNVTXT
 
         IF0 GA
-        ENDIF 
+        ENDIF
 
         IF0 GA-8
-        ENDIF 
+        ENDIF
 
         IF0 GA-10
-        ENDIF 
+        ENDIF
 
         IF0 GA-2
-        ENDIF 
+        ENDIF
 
         IF0 GA-3
-        ENDIF 
+        ENDIF
 
         IF0 GA-4
-        ENDIF 
+        ENDIF
 
         IF0 GA-1
 LOADER
@@ -1806,33 +1807,33 @@ LOADER
         LD B,#12
         JP #5D7C
 ENDLOADER
-        ENDIF 
+        ENDIF
 
         IF0 GA-5
-        ENDIF 
+        ENDIF
 
         IF0 GA-7
-        ENDIF 
+        ENDIF
         IF0 GA-9
-        ENDIF 
+        ENDIF
 
 ;       ENDIF
 
-        DISPLAY 
+        DISPLAY
         DISPLIN
         IFN TESTC
         DISPLAY "border for checking TPF....."
         POI16D
         DISPLAY /L,TESTC
-        DISPLAY 
-        ENDIF 
+        DISPLAY
+        ENDIF
         DISPLAY "end code...................."
         POI16D
         DISPLAY /L,ENDCOD
 ENDOBJ  DISPLAY "end object.................."
         POI16D
         DISPLAY /L,ENDOBJ
-        DISPLAY 
+        DISPLAY
         DISPLIN
         DISPLAY "total lenght of code block.."
         POI16D
@@ -1848,7 +1849,7 @@ ENDOBJ  DISPLAY "end object.................."
         PUSH BC
         PUSH HL
         PUSH DE
-        LDIR 
+        LDIR
         POP HL
         PUSH HL
         LD D,H
@@ -1860,11 +1861,11 @@ COTX_L0 PUSH BC
         LD (DE),A
         INC HL
         INC DE
-COTX_L1 EXA 
+COTX_L1 EXA
         LD A,(HL)
         DUP 3
         ADD A,A
-        EDUP 
+        EDUP
         LD C,A
         INC HL
         LD A,(HL)
@@ -1905,7 +1906,7 @@ COTX_L2 LD A,(HL)
         OR #80
         LD (DE),A
         INC DE
-        EXA 
+        EXA
         DEC A
         JR NZ,COTX_L1
         POP BC
@@ -1913,14 +1914,14 @@ COTX_L2 LD A,(HL)
         LD H,D
         LD L,E
         INC DE
-        EXA 
+        EXA
         LD (HL),A
         LD BC,#3FF
-        LDIR 
+        LDIR
         POP HL
         DEC H
         POP DE
         POP BC
-        LDIR 
-        RET 
-        ENDIF 
+        LDIR
+        RET
+        ENDIF

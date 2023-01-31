@@ -1,11 +1,12 @@
 ; This Source Code Form is subject to the terms of the MIT
 ; hLicense. If a copy of the MPL was not distributed with
-; this file, You can obtain one at ttps://github.com/aws/mit-0
+; this file, You can obtain one at:
+; https://github.com/alexanderbazhenoff/brainwave-cracktro-v2/blob/main/LICENSE
 
         MAIN "CRACKTR2"
         MACRO FROM
         DB 12,20,K2,38,2,4,"from"
-        ENDM 
+        ENDM
 WGC     EQU 15
         MACRO GC
         DB 3,13,K4,T03,1,7,"cracked"
@@ -23,7 +24,7 @@ WGC     EQU 15
         DB 5,27,K4,T15,1,3,"ALX"
         DB 5,27,K1,T16,1,1,"/"
         DB 5,33,K3,T17,2,2,"BW"
-        ENDM 
+        ENDM
 WGDR    EQU 15
         MACRO GDR
         DB 3,13,K4,T03,1,6,"disked"
@@ -34,9 +35,9 @@ WGDR    EQU 15
         DB 5,1,K1,T08,1,1,"+"
         IF0 OPT
         DB 5,13,K3,T09,1,9,"optim",#80,"ized"
-        ELSE 
+        ELSE
         DB 5,13,K3,T09,1,9,"corrected"
-        ENDIF 
+        ENDIF
         DB 5,13,K1,T10,1,1,"."
         DB 5,15,K1,T11,1,1,"."
         DB 5,17,K1,T12,1,1,"."
@@ -45,7 +46,7 @@ WGDR    EQU 15
         DB 5,27,K4,T15,1,3,"ALX"
         DB 5,27,K1,T16,1,1,"/"
         DB 5,33,K3,T17,2,2,"BW"
-        ENDM 
+        ENDM
 
 CLIF    EQU 16
         MACRO N_CLIF
@@ -66,7 +67,7 @@ CLIF    EQU 16
         DB 14,7,K2,40,1,3,"N",#83,"ew"
         DB 14,20,K4,42,1,10,"Generat",#80,"ion"
         DB 14,30,K3,46,1,8,"S",1,#82,"of",0,#83,"tware"
-        ENDM 
+        ENDM
         MACRO C_CLI1
         DB 10,8,K4,0,1,7,"%ENTER$"
         DB 10,8,K1,1,1,1,"-"
@@ -76,7 +77,7 @@ CLIF    EQU 16
         DB 11,23,K1,5,1,1,"-"
         DB 6,0,K1,6,1,1,"1"
         DB 6,11,K3,7,1,7,"unl",#80,1,"imi",#81,"t"
-        ENDM 
+        ENDM
 
         MACRO C_CLIF
         DB 13
@@ -86,7 +87,7 @@ CLIF    EQU 16
         DB 6,18,K1,10,2,1,"["
         DB 6,24,K4,11,2,3,"yep"
         DB 6,24,K4,12,1,3,"nop"
-        ENDM 
+        ENDM
 HERT    EQU 15
         MACRO N_HERT
         DB 10,5,K4,25,1,1,"H"
@@ -105,7 +106,7 @@ HERT    EQU 15
         DB 14,21,K3,42,1,8,"S",1,#82,"of",0,#82,"tware"
         DB 14,27,K4,44,2,4,"L",1,"td."
         DB 14,30,K2,46,1,3,"'89"
-        ENDM 
+        ENDM
         MACRO C_HERT
         DB 12
         DB 10,8,K4,0,1,7,"%ENTER$"
@@ -120,7 +121,7 @@ HERT    EQU 15
         DB 6,15,K1,9,2,1,"["
         DB 6,21,K4,10,2,3,"yep"
         DB 6,21,K4,11,1,3,"nop"
-        ENDM 
+        ENDM
 
 BUBLER  EQU 13
         MACRO N_BUBLER
@@ -138,7 +139,7 @@ BUBLER  EQU 13
         DB 14,17,K3,42,1,9,"Computers"
         DB 14,21,K2,44,2,3,"And"
         DB 14,31,K4,46,1,8,"Graphics"
-        ENDM 
+        ENDM
         MACRO C_BUBL
         DB 46
         DB 14,8,K4,0,1,7,"%ENTER$"
@@ -188,7 +189,7 @@ BUBLER  EQU 13
         DB 6,30,K4,43,2,3,"nop"
         DB 8,30,K4,44,2,3,"nop"
         DB 10,30,K4,45,2,3,"nop"
-        ENDM 
+        ENDM
 
 XENO    EQU 15
         MACRO N_XENO
@@ -208,7 +209,7 @@ XENO    EQU 15
         DB 14,24,K1,47,1,1,"'"
         DB 14,26,K3,48,1,1,"8"
         DB 14,29,K3,49,1,1,"6"
-        ENDM 
+        ENDM
         MACRO C_XENO
         DB 22
         DB 0,6,K2,0,1,5,"Sorry"
@@ -233,7 +234,7 @@ XENO    EQU 15
         DB 14,22,K3,19,2,3,"the"
         DB 14,30,K4,20,1,6,"act",#80,"ion"
         DB 14,30,K2,21,1,1,"!"
-        ENDM 
+        ENDM
 
         MACRO TOPO
         DB 14,0,K4,39,1,1,"T"
@@ -246,7 +247,7 @@ XENO    EQU 15
         DB 14,22,K4,46,1,1,"T"
         DB 14,25,K1,47,1,1,"'"
         DB 14,27,K2,48,1,1,"8"
-        ENDM 
+        ENDM
 
 WELLS   EQU 24
         MACRO N_WELLS
@@ -266,7 +267,7 @@ WELLS   EQU 24
         FROM
         TOPO
         DB 14,30,K2,49,1,1,"7"
-        ENDM 
+        ENDM
         MACRO C_WELLS
         DB 22
         DB 7,6,K2,0,1,5,"Wanna"
@@ -291,7 +292,7 @@ WELLS   EQU 24
         DB 2,18,K1,19,2,1,"["
         DB 2,24,K4,20,2,3,"yep"
         DB 2,24,K4,21,1,3,"nop"
-        ENDM 
+        ENDM
 
 VIAJ    EQU 17
         MACRO N_VIAJ
@@ -304,7 +305,7 @@ VIAJ    EQU 17
         FROM
         TOPO
         DB 14,30,K2,49,1,1,"9"
-        ENDM 
+        ENDM
 GFORC   EQU 20
         MACRO N_GFORC
         DB 10,1,K1,25,1,1,"$"
@@ -328,7 +329,7 @@ GFORC   EQU 20
         DB 14,25,K3,45,2,2,"C."
         DB 14,28,K4,46,3,2,"M."
         DB 14,31,K2,48,3,3,"'89"
-        ENDM 
+        ENDM
         MACRO C_GFORC
         DB 13
         C_CLI1
@@ -337,7 +338,7 @@ GFORC   EQU 20
         DB 6,20,K1,10,2,1,"["
         DB 6,26,K4,11,2,3,"yep"
         DB 6,26,K4,12,1,3,"nop"
-        ENDM 
+        ENDM
 
 
 CYCL    EQU 21
@@ -364,7 +365,7 @@ CYCL    EQU 21
         DB 14,26,K1,46,1,1,"A"
         DB 14,28,K1,47,1,1,"R"
         DB 14,30,K1,48,1,1,"E"
-        ENDM 
+        ENDM
 
 PUZN    EQU 11
         MACRO N_PUZN
@@ -380,7 +381,7 @@ PUZN    EQU 11
         DB 14,20,K2,39,1,8,"Software"
         DB 14,26,K1,41,2,4,"Lt",#81,"d."
         DB 14,29,K3,43,2,3,"'90"
-        ENDM 
+        ENDM
 
 YOGI    EQU 9
         MACRO N_YOGI
@@ -395,7 +396,7 @@ YOGI    EQU 9
         DB 14,25,K3,46,2,3,"'8T"
         DB 14,25,K1,48,2,1,"/"
         DB 14,31,K3,50,2,2,"90"
-        ENDM 
+        ENDM
         MACRO P_YOGI
         DB 27
         DB 3,8,K4,0,1,6,"Select"
@@ -425,7 +426,7 @@ YOGI    EQU 9
         DB 6,16,K4,24,2,1,"1"
         DB 6,16,K4,25,2,1,"2"
         DB 6,16,K4,26,2,1,"3"
-        ENDM 
+        ENDM
         MACRO YK
         DB 13,8,K4,0,1,7,"%ENTER$"
         DB 13,8,K1,1,1,1,"-"
@@ -433,28 +434,28 @@ YOGI    EQU 9
         DB 14,23,K4,3,1,5,"%SPC",#81,"$"
         DB 14,30,K3,4,2,5," load"
         DB 14,23,K1,5,1,1,"-"
-        ENDM 
+        ENDM
         MACRO YP1
         DB 2,0,K1,6,1,1,"1"
         DB 2,11,K2,7,1,7,"unlim",#80,"it"
-        ENDM 
+        ENDM
         MACRO YP11
         YP1
         DB 2,17,K4,8,1,5,"lives"
-        ENDM 
+        ENDM
         MACRO YP2
         DB 6,0,K1,9,2,1,"2"
-        ENDM 
+        ENDM
         MACRO YP22
         YP2
         DB 6,11,K4,10,1,7,"unlim",#80,"it"
-        ENDM 
+        ENDM
         MACRO C_YOG3
         YK
         YP11
         YP22
         DB 6,17,K3,11,1,4,"time"
-        ENDM 
+        ENDM
         MACRO C_CYCL
         DB 27
         C_YOG3
@@ -473,7 +474,7 @@ YOGI    EQU 9
         DB 2,24,K4,24,1,3,"nop"
         DB 6,24,K4,25,1,3,"nop"
         DB 10,24,K4,26,1,3,"nop"
-        ENDM 
+        ENDM
 
         MACRO C_PUZN
         DB 27
@@ -499,7 +500,7 @@ YOGI    EQU 9
         DB 2,25,K4,24,1,3,"nop"
         DB 6,25,K4,25,1,3,"nop"
         DB 10,25,K4,26,1,3,"nop"
-        ENDM 
+        ENDM
 
         MACRO C_VIAJ
         DB 28
@@ -525,7 +526,7 @@ YOGI    EQU 9
         DB 2,25,K4,25,1,3,"nop"
         DB 6,25,K4,26,1,3,"nop"
         DB 10,25,K4,27,1,3,"nop"
-        ENDM 
+        ENDM
 
 CDTTD   EQU 23
         MACRO N_CDTTD
@@ -553,7 +554,7 @@ CDTTD   EQU 23
         DB 14,22,K1,46,1,1,"'"
         DB 14,24,K2,47,1,1,"9"
         DB 14,26,K2,48,1,1,"0"
-        ENDM 
+        ENDM
         MACRO C_CDTTD
         DB 27
         DB 13,8,K4,0,1,7,"%ENTER$"
@@ -584,39 +585,39 @@ CDTTD   EQU 23
         DB 5,24,K4,24,2,3,"yep"
         DB 1,24,K4,25,1,3,"nop"
         DB 5,24,K4,26,1,3,"nop"
-        ENDM 
+        ENDM
 WO      EQU BUBLER
 TEXT
         IF0 GA-2
 WO=CYCL
-        ENDIF 
+        ENDIF
         IF0 GA-1
 WO=GFORC
-        ENDIF 
+        ENDIF
         IF0 GA-4
 WO=CDTTD
-        ENDIF 
+        ENDIF
         IF0 GA-3
 WO=VIAJ
-        ENDIF 
+        ENDIF
         IF0 GA-5
 WO=YOGI
-        ENDIF 
+        ENDIF
         IF0 GA-6
 WO=CLIF
-        ENDIF 
+        ENDIF
         IF0 GA-7
 WO=HERT
-        ENDIF 
+        ENDIF
         IF0 GA-8
 WO=WELLS
-        ENDIF 
+        ENDIF
         IF0 GA-9
 WO=PUZN
-        ENDIF 
+        ENDIF
         IF0 GA-10
 WO=XENO
-        ENDIF 
+        ENDIF
         DB 19+WO
         DB 7,8,K3,19,2,4,"next"
         DB 7,11,K2,20,2,3,"our"
@@ -626,47 +627,47 @@ WO=XENO
         DB 7,31,K4,24,1,2,"of"
         IF0 GA
         N_BUBLER
-        ENDIF 
+        ENDIF
 
         IF0 GA-1
         N_GFORC
-        ENDIF 
+        ENDIF
 
         IF0 GA-2
         N_CYCL
-        ENDIF 
+        ENDIF
 
         IF0 GA-3
         N_VIAJ
-        ENDIF 
+        ENDIF
 
         IF0 GA-4
         N_CDTTD
-        ENDIF 
+        ENDIF
 
         IF0 GA-5
         N_YOGI
-        ENDIF 
+        ENDIF
 
         IF0 GA-6
         N_CLIF
-        ENDIF 
+        ENDIF
 
         IF0 GA-7
         N_HERT
-        ENDIF 
+        ENDIF
 
         IF0 GA-8
         N_WELLS
-        ENDIF 
+        ENDIF
 
         IF0 GA-9
         N_PUZN
-        ENDIF 
+        ENDIF
 
         IF0 GA-10
         N_XENO
-        ENDIF 
+        ENDIF
         DB 1,8,K4,0,2,6,"Beware"
         DB 1,11,K1,2,1,3,"!!",#81,"!"
         DB 1,24,K4,9,1,11,"$Bra",#80,"inwave%"
@@ -704,9 +705,9 @@ TEXT2   DB 22
         DB 13,30,K2,21,0,1,"."
         IF0 CCR
 WTC=WGC
-        ELSE 
+        ELSE
 WTC=WGDR
-        ENDIF 
+        ENDIF
 TEXT3   DB 25+WTC
         DB 8,15,K1,T20,1,1,"+"
         DB 8,21,K2,T21,1,3,"fn",#81,"t"
@@ -735,9 +736,9 @@ TEXT3   DB 25+WTC
         DB 3,6,K2,T02,1,4,"game"
         IF0 CCR
         GC
-        ELSE 
+        ELSE
         GDR
-        ENDIF 
+        ENDIF
 TEXT4   DB 35
         DB 8,10,K1,0,1,1,#7B
         DB 8,20,K4,4,1,6,"GREETZ"
@@ -822,7 +823,7 @@ TEXT6   DB 9
         DB 6,25,K4,18,2,3,"yep"
         DB 2,25,K4,19,1,3,"nop"
         DB 6,25,K4,20,1,3,"nop"
-        ENDM 
+        ENDM
         MACRO YB2
         DB 21
         YK
@@ -831,7 +832,7 @@ TEXT6   DB 9
         YP22
         DB 6,19,K3,11,1,6,"sweets"
         TP
-        ENDM 
+        ENDM
         MACRO YB1
         DB 21
         YK
@@ -840,5 +841,5 @@ TEXT6   DB 9
         DB 6,9,K4,10,3,4,"sk",#80,"ip"
         DB 6,20,K3,11,1,10,"prec",#80,"ip",#80,"ices"
         TP
-        ENDM 
+        ENDM
 
