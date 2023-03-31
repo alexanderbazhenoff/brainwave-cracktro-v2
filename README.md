@@ -48,30 +48,30 @@ me to do a few dozen more releases. Thank you guys for that good old days.
 
 ## Credits
 
-- [alx/brainwave](https://zxart.ee/rus/avtory/a/alx/qid:602008/) - crack intro code, font graphics.
-- [megus/brainwave](https://zxart.ee/rus/avtory/m/megus/qid:602024/) - crack intro music 
-(['Fat Cat Wants Tasty Fish'](https://www.youtube.com/watch?v=1J2B4emUtis) 
-remix, which is originally written by [manwe/sands](https://demozoo.org/sceners/10117/)).
-- [prof/4d](https://zxart.ee/rus/avtory/p/prof4d/qid:602037/) or 
-[exocet/just for fun](https://zxart.ee/rus/avtory/e/exocet/qid:602036/) - crack intro logo graphics (different versions 
+- [Alx/Brainwave](https://zxart.ee/rus/avtory/a/alx/qid:602008/) - crack intro code, font graphics.
+- [Megus/Brainwave](https://zxart.ee/rus/avtory/m/megus/qid:602024/) - crack intro music 
+('[Fat Cat Wants Tasty Fish](https://www.youtube.com/watch?v=1J2B4emUtis)' 
+remix, which is originally written by [Manwe/Sands](https://demozoo.org/sceners/10117/)).
+- [Prof/4d](https://zxart.ee/rus/avtory/p/prof4d/qid:602037/) or 
+[Exocet/Just For Fun](https://zxart.ee/rus/avtory/e/exocet/qid:602036/) - crack intro logo graphics (different versions 
 of crack intros contains different logos).
-- [c-jeff/brainwave](https://zxart.ee/rus/avtory/c/c-jeff/qid:602039/) (nowadays 
-[seajeff](https://c-jeff.bandcamp.com/)) - help on music module optimizing: removed inaudible ornaments and elements to 
+- [C-jeff/Brainwave](https://zxart.ee/rus/avtory/c/c-jeff/qid:602039/) (nowadays 
+[Seajeff](https://seajeff.com/)) - help on music module optimizing: removed inaudible ornaments and elements to 
 extreme size decreasing.
 - Also used ZX-Spectrum Pro-tracker player binary optimizer, written by 
 [Ivan Roshin](https://zxart.ee/rus/avtory/i/ivan-roschin1/qid:602033/).
 
 ## Related
 
-- [**xeno crack intro on YouTube**](https://www.youtube.com/watch?v=gigJQwQKBt0)
-- [**nether world crack intro on YouTube**](https://www.youtube.com/watch?v=eH3-0tv6IoI)
-- [**xeno crack intro on pouet.net**](https://www.pouet.net/prod.php?which=89860)
-- [**nether world intro on pouet.net**](https://www.pouet.net/prod.php?which=89861)
+- [**Xeno crack intro on YouTube**](https://www.youtube.com/watch?v=gigJQwQKBt0)
+- [**Nether World crack intro on YouTube**](https://www.youtube.com/watch?v=eH3-0tv6IoI)
+- [**Xeno crack intro on pouet.net**](https://www.pouet.net/prod.php?which=89860)
+- [**Nether World intro on pouet.net**](https://www.pouet.net/prod.php?which=89861)
 
 ## About
 
-- [brainwave at speccywiki](http://speccy.info/Brainwave)
-- [brainwave at wikipedia](https://ru.wikipedia.org/wiki/Brainwave_team)
-- [brainwave at pouet.net](https://www.pouet.net/groups.php?which=715)
+- [Brainwave at speccywiki](http://speccy.info/Brainwave)
+- [Brainwave at wikipedia](https://ru.wikipedia.org/wiki/Brainwave_team)
+- [Brainwave at pouet.net](https://www.pouet.net/groups.php?which=715)
 - [zxart.ee](https://zxart.ee/)
 - [cracktro v1 sources](https://github.com/alexanderbazhenoff/brainwave-cracktro-v1)
